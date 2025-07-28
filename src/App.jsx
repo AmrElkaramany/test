@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import {createBrowserRouter, createHashRouter, RouterProvider} from "react-router-dom"
 import Home from './Components/home/Home'
 import About from './Components/About/About'
 import Layout from './Components/Layout/Layout'
@@ -12,7 +12,7 @@ import Portfolio from './Components/Portfolio/Portfolio'
 function App() {
 
 
- let x =  createBrowserRouter([
+ let x =  createHashRouter([
 
     {path:'' , element:<Layout/> , children:[
           {path:'home' , element:<Home/>},
